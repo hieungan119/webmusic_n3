@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('nguyenthihieungan', function () {
+Route::get('/nguyenthihieungan', function () {
     return'Nguyễn Thị Hiếu Ngân';
 });
  
