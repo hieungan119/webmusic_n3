@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema; // Thêm dòng này
+use Illuminate\Support\Facades\Schema; // Thêm dòng này để quản lý Schema
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Schema::defaultStringLength(191); // Thêm dòng này để fix lỗi 1071
+        // Fix lỗi 1071 cho MySQL/MariaDB đời cũ
+        Schema::defaultStringLength(191); 
     }
 }
