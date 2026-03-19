@@ -19,6 +19,10 @@ Route::get('nguyenleminhnhu', function () {
 });
 Route::get('/HuynhThiQuynhNhu', function () {
     return 'Huỳnh Thị Quỳnh Như';
+
 });        
  
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+
+Route::get('/long-movies', [MovieController::class, 'longMovies']);
+
