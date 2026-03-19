@@ -23,3 +23,6 @@ Route::get('nguyenleminhnhu', function () {
 Route::get('/HuynhThiQuynhNhu', function () {
     return 'Huỳnh Thị Quỳnh Như';
 });
+use App\Http\Controllers\MovieController;
+
+Route::get('/long-movies', [MovieController::class, 'longMovies']);
