@@ -21,6 +21,6 @@ Route::get('nguyenleminhnhu', function () {
     return "Nguyễn Lê Minh Như";
 });
 Route::get('/HuynhThiQuynhNhu', function () {
-    return 'Huỳnh Thị Quỳnh Như';
+    return 'Huỳnh Thị Quỳnh Như';//
 });        
  
