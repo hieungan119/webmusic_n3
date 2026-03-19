@@ -26,3 +26,4 @@ Route::get('/HuynhThiQuynhNhu', function () {
 });
 
 Route::get('/phim-canada', 'App\Http\Controllers\MovieController@phimCanada');
+
