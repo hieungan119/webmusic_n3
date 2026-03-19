@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MovieController;
 Route::get('/nguyenthihieungan', function () {
     return'Nguyễn Thị Hiếu Ngân';
 });
@@ -23,3 +23,5 @@ Route::get('nguyenleminhnhu', function () {
 Route::get('/HuynhThiQuynhNhu', function () {
     return 'Huỳnh Thị Quỳnh Như';
 });
+
+Route::get('/top-movies', [MovieController::class, 'topMovies']);
