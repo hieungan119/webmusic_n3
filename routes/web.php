@@ -25,3 +25,8 @@ Route::get('/HuynhThiQuynhNhu', function () {
 
 Route::get('/phim-canada', 'App\Http\Controllers\MovieController@phimCanada');
 
+Route::get('/sach','App\Http\Controllers\BookController@listBooks');
+
+Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
+
+Route::get('sach/chitiet/{id}','App\Http\Controllers\BookController@chitiet');
