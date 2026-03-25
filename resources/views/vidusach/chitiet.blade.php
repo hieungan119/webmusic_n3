@@ -22,7 +22,7 @@
     Hình thức bìa: <b>{{$data->hinh_thuc_bia}}</b><br>
   </div>
 </div>
-<div class='row'> // 
+<div class='row'> 
   <div class='col-sm-12'>
     <b>Mô tả:</b><br>
     {{$data->mo_ta}}
