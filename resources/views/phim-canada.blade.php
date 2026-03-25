@@ -5,7 +5,9 @@
     <title>Phim của Canada</title>
     <style>
         body { font-family: Arial; margin: 20px; }
-        div { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: left; }
+        th { background-color: #f4f4f4; }
     </style>
 </head>
 <body>
@@ -14,13 +16,24 @@
     @if($phim->isEmpty())
         <p>Không có phim nào từ Canada trong database.</p>
     @else
-        @foreach($phim as $p)
-            <div>
-                <p><strong>Tên phim:</strong> {{ $p->movie_name }}</p>
-                <p><strong>Ngày phát hành:</strong> {{ $p->release_date }}</p>
-                <p><strong>Thời lượng:</strong> {{ $p->runtime }} phút</p>
-            </div>
-        @endforeach
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên phim</th>
+                    <th>Ngày phát hành</th>
+                    <th>Thời lượng (phút)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($phim as $p)
+                    <tr>
+                        <td>{{ $p->movie_name }}</td>
+                        <td>{{ $p->release_date }}</td>
+                        <td>{{ $p->runtime }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endif
 </body>
 </html>
