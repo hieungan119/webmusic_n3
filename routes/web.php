@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\DB;
@@ -36,3 +37,4 @@ Route::get("/topbudget","App\Http\Controllers\BudgetController@topbudget");
 
 Route::get('/book','App\Http\Controllers\BookController@listBooks');
 Route::get('/book/theloai/{id}','App\Http\Controllers\BookController@theloai');
+Route::get('/sach/chitiet/{id}', [BookController::class, 'chitiet']);

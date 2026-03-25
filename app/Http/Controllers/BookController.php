@@ -16,4 +16,14 @@ class BookController extends Controller
 $data = DB::select("select * from sach where the_loai = ?",[$id]);
 return view("vidusach.index", compact("data"));
 }
+public function chitiet($id)
+
+{
+    $data = DB::table('sach')->where('id', $id)->first();
+    if (!$data) {
+        return "Không tìm thấy sách ";
+    }
+    return view("vidusach.chitiet", compact("data"));
+
+}
 }
